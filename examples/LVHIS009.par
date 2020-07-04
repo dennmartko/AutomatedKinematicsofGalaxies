@@ -1,0 +1,117 @@
+// This is a template input file for the Galfit utility.
+// Lines beginning with the double-slash or hash and blank 
+// lines are not read by the program.
+
+// Name of the fitsfile to be modeled.
+FITSFILE  U3_25160_Ha.fits
+
+OUTFOLDER  U3_25160
+
+// Using the 3DFIT utility? Must be true!!
+3DFIT       true
+       
+// Number of radii to be modeled.
+NRADII      4
+         
+// Separation between radii in arcsec.
+RADSEP      0.4
+         
+// Systemic velocity of the galaxy (in km/s).
+VSYS        10
+        
+// X-Y coordinates of the galaxy center (in pixel).
+XPOS        11.6        
+YPOS        12.3
+        
+// Initial global values for parameters:
+// Rotation and dispersion velocities (in km/s),
+// inclination and position angles [measured
+// anti-clockwise from north] (in degrees),
+// height scale of the disk (in arcsec).
+VROT        130    
+VRAD        0           
+VDISP       15         
+INC         50
+PA          305       
+Z0          0.1
+
+DELTAINC    2
+//DELTAPA     10
+
+DISTANCE    4.43   
+// Free parameters for the minimization.
+FREE        VROT VDISP //PA INC
+
+
+
+LINEAR      0.89512
+//LINEAR        0.5095541401273885
+//LINEAR          0.85
+// OPTIONAL: Function to be minimized (default is 2):
+// = 1: chi-squared.
+// = 2: |mod-obs|.
+// = 3: |mod-obs|/|mod+obs|.
+// = 4: (mod-obs)^2.
+FTYPE       1
+          
+// OPTIONAL: Weighting function (default is 2):
+// = 0: uniform weight.
+// = 1: |cos(θ)|.
+// = 2: cos(θ)^2.
+// θ is the azimuthal angle.
+WFUNC       0
+          
+// OPTIONAL: Layer type along z (default is 1):
+// = 1: gaussian layer.
+// = 2: sech2 layer.
+// = 3: exponential layer.
+// = 4: Lorentzian layer.
+// = 5: box layer.;
+LTYPE       3
+          
+// OPTIONAL: Number of subcloud in a velocity profile.
+// (default is = total number of channels).
+NV          99
+         
+// OPTIONAL: Surface density of clouds in the plane of ring (1e20).
+// (default is = 10):SMOOTH&
+CDENS       10
+         
+// OPTIONAL: Tolerance for the minimization (default is 0.001):
+TOL         1E-03
+      
+// OPTIONAL: Using a mask for the minimization (default is SMOOTH):
+MASK        SMOOTH
+FACTOR      1
+//SNRCUT      4.6
+//GROWTHCUT   2.2
+MINCHANNELS 11
+
+ADRIFT      TRUE
+
+PLOTMASK    TRUE
+
+SPACEPAR    FALSE
+P1          VROT
+P1PAR       0 80 5
+P2          VDISP
+P2PAR       0 20 5
+
+// OPTIONAL: Normalization type (default is LOCAL):
+NORM        LOCAL
+       
+// OPTIONAL: Side of the galaxy to be fitted (default is B):
+// = A: Approaching.
+// = R: Receding.
+// = B: Both.
+SIDE        B
+          
+// OPTIONAL: Using a two stages minimization (default is true):
+TWOSTAGE    true
+      
+// OPTIONAL: Degree of polynomial fitting angles (default is bezier):
+POLYN       0
+          
+// OPTIONAL: Enabling error estimation (default is false):
+flagErrors  true
+

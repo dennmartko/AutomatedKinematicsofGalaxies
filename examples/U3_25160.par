@@ -1,0 +1,20 @@
+FITSFILE 	U3_25160_Ha.fits
+3DFIT       true
+NRADII      4	
+RADSEP      0.3
+VSYS        10
+XPOS        11.6         
+YPOS        12.3
+VROT        130
+VDISP       15
+INC         50
+PA          305
+Z0          0.1
+FREE        VROT VDISP
+FTYPE       2
+MASK        NEGATIVE
+blankCut    1.2
+TWOSTAGE    false
+flagErrors  true
+Linear      0.89512
+

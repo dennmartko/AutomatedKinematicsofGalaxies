@@ -1,0 +1,20 @@
+FITSFILE    final_Galaxy_11.fits
+THREADS     4
+3DFIT       true
+NRADII      30
+RADSEP      30     
+VSYS        120
+XPOS        76        
+YPOS        76     
+VROT        120  
+VDISP       10   
+INC         50
+PA          90
+Z0          1
+FREE        VROT VDISP
+LTYPE       2
+FTYPE       2
+DISTANCE    3.2
+MASK        SEARCH
+WFUNC       2
+TWOSTAGE    true
